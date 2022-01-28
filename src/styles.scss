@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+// Mis parciales.
+// https://www.udemy.com/course/advanced-css-and-scss/learn/lecture/8274478#overview
+
+@use "/src/scss/animations";
+@use "/src/scss/base";
+@use "/src/scss/functions";
+@use "/src/scss/typography";
+@import "/src/scss/mixins";
+@import "/src/scss/utilities";
+@import "/src/scss/variables";
