@@ -1,1 +1,48 @@
-<h2>Inicio</h2>
+<div class="headerMain">
+  <div class="headerSideBar">
+
+  </div>
+  <button id="buttonRotate" class="buttonRotate" (click)="toggleActive()">
+    <span
+      [ngClass]="sidebarIsOpen ? ' fa fa-arrow-circle-right fa-2x open' : 'fa fa-arrow-circle-right fa-2x close'"></span>
+  </button>
+</div>
+
+<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+
+<label for="openSidebarMenu" class="sidebarIconToggle">
+  <div class="spinner diagonal part-1"></div>
+  <div class="spinner horizontal"></div>
+  <div class="spinner diagonal part-2"></div>
+</label>
+
+<div id="sidebarMenu">
+  <ul class="sidebarMenuInner">
+    <li><span>DASHBOARD</span></li>
+    <ul>
+      <li>Ingresos </li>
+      <li>Gastos</li>
+    </ul>
+  </ul>
+
+  <ul class="sidebarMenuInner">
+    <li> <span>INGRESOS</span></li>
+    <ul>
+      <li><i class="fa fa-hippo fa-2x"></i>Cápitulos </li>
+      <li>Económicos</li>
+    </ul>
+  </ul>
+
+</div>
+
+<div class="mainInner">
+  <div>mainInner</div>
+</div>
+
+<!--
+ https://codepen.io/plavookac/pen/qomrMw
+ https://codepen.io/JFarrow/pen/fFrpg
+ -->
+
+<!-- https://icons8.com/line-awesome -->
+<!-- <link rel="stylesheet" href="path/to/line-awesome/css/line-awesome-font-awesome.min.css"> -->

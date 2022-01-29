@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'OCM-Ayto-Front';
+  // title = 'OCM-Ayto-Front';
+  public sidebarIsOpen = true
+
+
+  toggleActive() {
+    this.sidebarIsOpen = !this.sidebarIsOpen
+  }
+
+
 }
+
