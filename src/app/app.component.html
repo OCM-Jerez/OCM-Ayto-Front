@@ -1,20 +1,14 @@
 <div class="headerMain">
-  <div class="headerSideBar">
-
-  </div>
+  <div class="headerSideBar"></div>
   <button id="buttonRotate" class="buttonRotate" (click)="toggleActive()">
     <span
-      [ngClass]="sidebarIsOpen ? ' fa fa-arrow-circle-right fa-2x open' : 'fa fa-arrow-circle-right fa-2x close'"></span>
+      [ngClass]="sidebarIsOpen ? ' fa fa-arrow-circle-left fa-2x open' : 'fa fa-arrow-circle-left fa-2x close'"></span>
   </button>
 </div>
 
-<input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+<!-- <input type="checkbox" #myCheckbox (change)="onCheckboxChange($event)"> -->
+<input type="checkbox" #myCheckbox checked=true>
 
-<label for="openSidebarMenu" class="sidebarIconToggle">
-  <div class="spinner diagonal part-1"></div>
-  <div class="spinner horizontal"></div>
-  <div class="spinner diagonal part-2"></div>
-</label>
 
 <div id="sidebarMenu">
   <ul class="sidebarMenuInner">
