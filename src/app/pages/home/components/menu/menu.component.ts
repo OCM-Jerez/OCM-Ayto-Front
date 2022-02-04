@@ -19,4 +19,8 @@ export class MenuComponent {
     this.router.navigate(['/DashboardGastos']);
   }
 
+  programas() {
+    this.router.navigate(['/programas']);
+  }
+
 }

@@ -17,6 +17,10 @@ export const routes: Routes = [
                 loadChildren: () => import('./dashboard-gastos/dashboard-gastos.module').then(m => m.DashboardGastosModule)
             },
             {
+                path: "programas",
+                loadChildren: () => import('./programas/programas.module').then(m => m.ProgramasModule)
+            },
+            {
                 path: "",
                 redirectTo: 'DashboardIngresos'
             }
@@ -52,10 +56,7 @@ export const routes: Routes = [
         //         path: "pages/organicos",
         //         loadChildren: () => import('./organicos/organicos.module').then(m => m.OrganicosModule)
         //     },
-        //     {
-        //         path: "pages/programas",
-        //         loadChildren: () => import('./programas/programas.module').then(m => m.ProgramasModule)
-        //     },
+        //
         //     {
         //         path: "pages/programaDetail",
         //         loadChildren: () => import('./programa-detail/programa-detail.module').then(m => m.ProgramaDetailModule)
