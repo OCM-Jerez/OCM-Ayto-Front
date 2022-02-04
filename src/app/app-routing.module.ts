@@ -5,8 +5,6 @@ import { RouterModule } from '@angular/router';
   imports: [
     RouterModule.forRoot(
       [
-
-
         {
           path: "",
           // canActivate: [HomeGuard],

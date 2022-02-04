@@ -3,8 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardIngresosComponent } from './dashboard-ingresos-page/dashboard-ingresos.component';
 import { HomeComponent } from './home.component';
 
-
-
 export const routes: Routes = [
     {
         path: "",
@@ -13,6 +11,10 @@ export const routes: Routes = [
             {
                 path: "DashboardIngresos",
                 component: DashboardIngresosComponent
+            },
+            {
+                path: "DashboardGastos",
+                loadChildren: () => import('./dashboard-gastos/dashboard-gastos.module').then(m => m.DashboardGastosModule)
             },
             {
                 path: "",
