@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { HomeComponent } from './home.component';
     HomeComponent,
     HeaderComponent,
     MenuComponent,
+    FooterComponent,
 
   ],
   imports: [
