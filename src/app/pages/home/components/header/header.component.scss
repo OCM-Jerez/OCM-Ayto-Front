@@ -1,0 +1,53 @@
+@use "sass:map";
+@import "/src/scss/variables";
+
+.buttonRotate {
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+}
+
+.buttonRotate .open {
+    transition: all 0.45s;
+    background: #fbc02d;
+    border-radius: 1rem;
+    transform: rotate(0deg);
+}
+
+.buttonRotate .close {
+    transition: all 0.45s;
+    background: #fbc02d;
+    border-radius: 1rem;
+    transform: rotate(180deg);
+}
+
+.headerSideBar {
+    display: flex;
+    width: 200px;
+    background-color: green;
+}
+.headerMain {
+    display: flex;
+    background-color: map.get($OCM-colors, "navBarBackground");
+    height: 40px;
+}
+
+.main {
+    margin: 0 auto;
+    display: block;
+    height: 100%;
+    margin-top: 60px;
+}
+.mainInner {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.mainInner div {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}

@@ -1,19 +1,8 @@
-<div class="headerMain">
-    <div class="headerSideBar"></div>
-    <button id="buttonRotate" class="buttonRotate" (click)="toggleActive()">
-        <span
-            [ngClass]="sidebarIsOpen ? 'fa fa-arrow-circle-left fa-2x open' : 'fa fa-arrow-circle-left fa-2x close'"></span>
-    </button>
-</div>
-
-<!-- <input type="checkbox" #myCheckbox (change)="onCheckboxChange($event)"> -->
-<input type="checkbox" #myCheckbox checked=true>
-
 <div id="sidebarMenu">
     <ul class="sidebarMenuInner">
         <li><span>DASHBOARD</span></li>
         <ul>
-            <li (click)="DashboardIngresos()"><i class="fa fa-euro-sign"></i>Ingresos </li>
+            <li><i class="fa fa-euro-sign"></i>Ingresos </li>
             <li><i class="fa fa-shopping-cart"></i>Gastos</li>
             <li><i class="fa fa-calendar"></i>Retrasos</li>
         </ul>
@@ -70,18 +59,3 @@
     </ul>
 
 </div>
-
-<div class="mainInner">
-    <div>mainInner</div>
-    <app-dashboard-ingresos></app-dashboard-ingresos>
-    <card-simple></card-simple>
-
-</div>
-
-<!--
-   https://codepen.io/plavookac/pen/qomrMw
-   https://codepen.io/JFarrow/pen/fFrpg
-   -->
-
-<!-- https://icons8.com/line-awesome -->
-<!-- <link rel="stylesheet" href="path/to/line-awesome/css/line-awesome-font-awesome.min.css"> -->
