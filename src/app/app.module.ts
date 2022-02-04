@@ -3,6 +3,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HighchartsChartModule } from 'highcharts-angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './commons/components/card/card.component';
@@ -15,9 +16,10 @@ import { CardSimpleComponent } from './pages/home/dashboard-ingresos-page/compon
 import { GraphIngresos1Component } from './pages/home/dashboard-ingresos-page/components/graph-ingresos1/graph-ingresos1.component';
 import { DashboardIngresosComponent } from './pages/home/dashboard-ingresos-page/dashboard-ingresos.component';
 
+
 @NgModule({
   declarations: [AppComponent, DashboardIngresosComponent, CardSimpleComponent, CardComponent, CardNameComponent, CardDataComponent, CardEvolutionComponent, CardGraphComponent, CardIconComponent, GraphIngresos1Component],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HighchartsChartModule,],
   providers: [],
   bootstrap: [AppComponent],
 })
