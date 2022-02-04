@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -6,8 +7,16 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent {
+  constructor(private router: Router) { }
 
   @Input() sidebarIsOpen = false;
 
+  ingresos() {
+    this.router.navigate(['/DashboardIngresos']);
+  }
+
+  gastos() {
+    this.router.navigate(['/DashboardGastos']);
+  }
 
 }
