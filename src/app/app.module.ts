@@ -1,5 +1,6 @@
 // https://levelup.gitconnected.com/a-complete-guide-to-angular-modules-faf5a85e3e60
 
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,7 +20,7 @@ import { DashboardIngresosComponent } from './pages/home/dashboard-ingresos-page
 
 @NgModule({
   declarations: [AppComponent, DashboardIngresosComponent, CardSimpleComponent, CardComponent, CardNameComponent, CardDataComponent, CardEvolutionComponent, CardGraphComponent, CardIconComponent, GraphIngresos1Component],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HighchartsChartModule,],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HighchartsChartModule, HttpClientModule,],
   providers: [],
   bootstrap: [AppComponent],
 })
