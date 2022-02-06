@@ -1,3 +1,4 @@
+// https://blog.ag-grid.com/cell-renderers-in-ag-grid-every-different-flavour/#angular
 
 import { Component, OnDestroy } from "@angular/core";
 import { ICellRendererAngularComp } from "ag-grid-angular/lib/interfaces";
