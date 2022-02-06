@@ -14,111 +14,27 @@ export const routes: Routes = [
             },
             {
                 path: "dashboardGastos",
-                loadChildren: () => import('./dashboard-gastos/dashboard-gastos.module').then(m => m.DashboardGastosModule)
+                loadChildren: () => import('./dashboard-gastos-page/dashboard-gastos.module').then(m => m.DashboardGastosModule)
             },
             {
                 path: "programas",
-                loadChildren: () => import('./programas/programas.module').then(m => m.ProgramasModule)
+                loadChildren: () => import('./programas-page/programas.module').then(m => m.ProgramasModule)
             },
             {
                 path: "economicosGastos",
-                loadChildren: () => import('./economicos-gastos/economicos-gastos.module').then(m => m.EconomicosGastosModule)
+                loadChildren: () => import('./economicos-gastos-page/economicos-gastos.module').then(m => m.EconomicosGastosModule)
             },
             {
                 path: "",
-                redirectTo: 'DashboardIngresos'
+                redirectTo: 'dashboardIngresos'
             }
         ]
-        // children: [
-        //     {
-        //         path: "DashboardIngresos",
-        //         component: DashboardIngresosComponent
-        //     },
-        //     {
-        //         path: "dashboardGastos",
-        //         loadChildren: () => import('./dashboard-gastos/dashboard-gastos.module').then(m => m.DashboardGastosModule)
-        //     },
-        //     {
-        //         path: "dashboardTiempos",
-        //         loadChildren: () => import('./dashboard-tiempos/dashboard-tiempos.module').then(m => m.DashboardtiemposModule)
-        //     },
-        //     //   **************** ingresos **********************
-        //     {
-        //         path: "pages/capituloIngresos",
-        //         loadChildren: () => import('./capitulo-ingresos/capitulo-ingresos.module').then(m => m.CapituloIngresosModule)
-        //     },
-        //     {
-        //         path: "pages/ecoIngresos",
-        //         loadChildren: () => import('./eco-ingresos/eco-ingresos.module').then(m => m.EcoIngresosModule)
-        //     },
-        //     //   **************** gastos ************************
-        //     {
-        //         path: "pages/capituloGasto",
-        //         loadChildren: () => import('./capitulo-gastos/capitulo-gastos.module').then(m => m.CapituloGastosModule)
-        //     },
-        //     {
-        //         path: "pages/organicos",
-        //         loadChildren: () => import('./organicos/organicos.module').then(m => m.OrganicosModule)
-        //     },
-        //
-        //     {
-        //         path: "pages/programaDetail",
-        //         loadChildren: () => import('./programa-detail/programa-detail.module').then(m => m.ProgramaDetailModule)
-        //     },
-
-        //     
-        //     //  **************** información económica ************************
-        //     {
-        //         path: "pages/presupuestos",
-        //         loadChildren: () => import('./presupuestos/presupuestos.module').then(m => m.PresupuestosModule)
-        //     },
-        //     {
-        //         path: "pages/cuentaGeneral",
-        //         loadChildren: () => import('./cuenta-general/cuenta-general.module').then(m => m.CuentaGeneralModule)
-        //     },
-
-        //     //  **************** organización municipal ************************
-        //     {
-        //         path: "pages/delegacion",
-        //         loadChildren: () => import('./delegacion/delegacion.module').then(m => m.DelegacionModule)
-        //     },
-        //     {
-        //         path: "pages/ente",
-        //         loadChildren: () => import('./entes/entes.module').then(m => m.EntesModule)
-        //     },
-        //     {
-        //         path: "pages/organoContratacion",
-        //         loadChildren: () => import('./organo-contratacion/organo-contratacion.module').then(m => m.OrganoContratacionModule)
-        //     },
-        //     {
-        //         path: "pages/sindicato",
-        //         loadChildren: () => import('./sindicatos/sindicatos.module').then(m => m.SindicatosModule)
-        //     },
-        //     //  **************** organización geográfica ************************
-        //     {
-        //         path: "pages/barrio",
-        //         loadChildren: () => import('./barrios/barrios.module').then(m => m.BarriosModule)
-        //     },
-        //     {
-        //         path: "pages/distrito",
-        //         loadChildren: () => import('./distritos/distritos.module').then(m => m.DistritosModule)
-        //     },
-        //     {
-        //         path: "pages/seccionCensal",
-        //         loadChildren: () => import('./seccion-censal/seccion-censal.module').then(m => m.SeccionCensalModule)
-        //     },
-        //     {
-        //         path: "",
-        //         redirectTo: 'DashboardIngresos'
-        //     }
-        // ],
-    },
-    { path: 'economicos-gastos', loadChildren: () => import('./economicos-gastos/economicos-gastos.module').then(m => m.EconomicosGastosModule) }
+    }
 ]
 
 @NgModule({
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule],
-
 })
+
 export class HomeRoutingModule { }
