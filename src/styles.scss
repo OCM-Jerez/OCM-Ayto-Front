@@ -12,6 +12,11 @@
 @import "ag-grid-community/dist/styles/ag-grid.css";
 @import "ag-grid-community/dist/styles/ag-theme-balham.css";
 
+.gridContainer {
+    width: 1700px;
+    color: black;
+}
+
 .OCM-navbarFooter {
     a {
         text-decoration: none;

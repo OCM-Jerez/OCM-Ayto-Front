@@ -9,16 +9,20 @@ export const routes: Routes = [
         component: HomeComponent,
         children: [
             {
-                path: "DashboardIngresos",
+                path: "dashboardIngresos",
                 component: DashboardIngresosComponent
             },
             {
-                path: "DashboardGastos",
+                path: "dashboardGastos",
                 loadChildren: () => import('./dashboard-gastos/dashboard-gastos.module').then(m => m.DashboardGastosModule)
             },
             {
                 path: "programas",
                 loadChildren: () => import('./programas/programas.module').then(m => m.ProgramasModule)
+            },
+            {
+                path: "economicosGastos",
+                loadChildren: () => import('./economicos-gastos/economicos-gastos.module').then(m => m.EconomicosGastosModule)
             },
             {
                 path: "",
@@ -62,10 +66,7 @@ export const routes: Routes = [
         //         loadChildren: () => import('./programa-detail/programa-detail.module').then(m => m.ProgramaDetailModule)
         //     },
 
-        //     {
-        //         path: "pages/ecoGastos",
-        //         loadChildren: () => import('./eco-gastos/eco-gastos.module').then(m => m.EcoGastosModule)
-        //     },
+        //     
         //     //  **************** información económica ************************
         //     {
         //         path: "pages/presupuestos",
@@ -111,7 +112,8 @@ export const routes: Routes = [
         //         redirectTo: 'DashboardIngresos'
         //     }
         // ],
-    }
+    },
+    { path: 'economicos-gastos', loadChildren: () => import('./economicos-gastos/economicos-gastos.module').then(m => m.EconomicosGastosModule) }
 ]
 
 @NgModule({

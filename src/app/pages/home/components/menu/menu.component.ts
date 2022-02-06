@@ -12,15 +12,19 @@ export class MenuComponent {
   @Input() sidebarIsOpen = false;
 
   ingresos() {
-    this.router.navigate(['/DashboardIngresos']);
+    this.router.navigate(['/dashboardIngresos']);
   }
 
   gastos() {
-    this.router.navigate(['/DashboardGastos']);
+    this.router.navigate(['/dashboardGastos']);
   }
 
   programas() {
     this.router.navigate(['/programas']);
+  }
+
+  economicosGastos() {
+    this.router.navigate(['/economicosGastos']);
   }
 
 }
