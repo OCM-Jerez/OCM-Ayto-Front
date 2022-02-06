@@ -1,9 +1,14 @@
-<div>
-    <ag-grid-angular #agGrid style="width: 100%; height: 90vh; padding-right: 20px; margin-left: 10px"
-        class="ag-theme-balham" [rowData]="programas$ | async" [columnDefs]="columnDefs" [defaultColDef]="defaultColDef"
-        rowSelection="multiple" [groupSuppressAutoColumn]="true" [groupIncludeFooter]="true"
-        [groupIncludeTotalFooter]="true" [groupHeaderHeight]="groupHeaderHeight" [headerHeight]="headerHeight"
-        [localeText]="localeText" [suppressAggFuncInHeader]="true" (gridReady)="onGridReady($event)"
-        (firstDataRendered)="headerHeightSetter()" (columnResized)="headerHeightSetter()">
-    </ag-grid-angular>
+<div class="gridContainer">
+    <div>nuevo </div>
+    <div>
+        <ag-grid-angular #agGrid style="width: 100%; height: 90vh; padding-right: 20px; margin-left: 10px"
+            class="ag-theme-balham" [rowData]="programas$ | async" [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef" rowSelection="multiple" [groupSuppressAutoColumn]="true"
+            [groupIncludeFooter]="true" [groupIncludeTotalFooter]="true" [groupHeaderHeight]="groupHeaderHeight"
+            [headerHeight]="headerHeight" [localeText]="localeText" [suppressAggFuncInHeader]="true"
+            (gridReady)="onGridReady($event)" (firstDataRendered)="headerHeightSetter()"
+            (gridReady)="onGridReady($event)" (columnResized)="headerHeightSetter()"
+            [frameworkComponents]="frameworkComponents">
+        </ag-grid-angular>
+    </div>
 </div>

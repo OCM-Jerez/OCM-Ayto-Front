@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { AgGridAngular } from 'ag-grid-angular';
 import { GridOptions } from 'ag-grid-community';
 import { Observable } from 'rxjs';
+import { BtnCellRenderer } from '../../../commons/ag-grid/button-cell-renderer';
 import localeTextESPes from '../../../commons/ag-grid/localeTextESPes.json';
 import { IPrograma } from './programas.interface';
 import { ProgramaService } from './programas.service';
@@ -28,9 +29,9 @@ export class ProgramasComponent implements OnInit {
   public DesEcoWidth?: number;
   public CreditosWidth?: number;
   public screenSize?: any;
-  columnasWidth = 130;
   programas$: Observable<IPrograma[]>;
   programa: IPrograma;
+  frameworkComponents: { btnCellRenderer: typeof BtnCellRenderer; };
 
   constructor(
     private programaService: ProgramaService,
@@ -40,33 +41,45 @@ export class ProgramasComponent implements OnInit {
       {
         headerName: 'Código',
         field: 'codPro',
-        width: 550,
-        // rowGroup: true,
-        // filter: false,
-        // pinned: 'left',
-        // showRowGroup: 'NombreTercero',
-        // cellRenderer: 'agGroupCellRenderer',
+        width: 80,
+        // cellRenderer: CellRendererOCM,
       },
       {
         headerName: 'Descripcion',
         field: 'descripcionOCM',
-        width: 110,
+        width: 500,
       },
       {
         headerName: 'Observaciones',
         field: 'observaciones',
-        width: 100,
+        width: 500,
       },
       {
         headerName: 'WEB OCM',
         field: 'WebOCM',
-        width: 100,
+        width: 300,
+      },
+      {
+        width: 80,
+        cellRenderer: 'btnCellRenderer',
+      },
+      {
+        width: 80,
+        cellRenderer: 'btnCellRenderer',
+        cellRendererParams: {
+          clicked: function (field: any) {
+            alert(`${field} was clicked`);
+          }
+        }
       },
 
     ];
 
+    this.frameworkComponents = {
+      btnCellRenderer: BtnCellRenderer
+    };
+
     this.defaultColDef = {
-      width: this.columnasWidth,
       sortable: true,
       resizable: true,
       filter: true,
