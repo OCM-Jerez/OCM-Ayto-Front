@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
 import { AgGridAngular } from 'ag-grid-angular';
 import { GridOptions } from 'ag-grid-community';
 import { Observable } from 'rxjs';
@@ -35,7 +34,6 @@ export class ProgramasComponent implements OnInit {
 
   constructor(
     private programaService: ProgramaService,
-    private router: Router,
   ) {
     this.columnDefs = [
       {
@@ -72,7 +70,6 @@ export class ProgramasComponent implements OnInit {
           }
         }
       },
-
     ];
 
     this.frameworkComponents = {
@@ -106,7 +103,6 @@ export class ProgramasComponent implements OnInit {
     this.localeText = localeTextESPes;
   }
 
-
   ngOnInit(): void {
     // this.programaService.getProgramas().subscribe(response => {
     //   this.programas$ = of(response);
@@ -114,18 +110,18 @@ export class ProgramasComponent implements OnInit {
     //   this.rowData = this.programas$;
     // });
 
+    // this.programaService.getProgramas().subscribe(response => {
+    //   console.log(response)
+    // });
+
     this.programas$ = this.programaService.getProgramas();
-    console.log(this.programas$);
+    // console.log(this.programas$);
     this.rowData = this.programas$;
   }
-
 
   async onGridReady(params) {
     this.gridApi = params.api;
     this.gridColumnApi = params.columnApi;
-    // this.rowData = this.programas$;
-    // console.log(this.programas$);
-
   }
 
   headerHeightSetter() {

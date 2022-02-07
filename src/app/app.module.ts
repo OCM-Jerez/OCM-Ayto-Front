@@ -19,7 +19,7 @@ import { DashboardIngresosComponent } from './pages/home/dashboard-ingresos-page
 
 
 @NgModule({
-  declarations: [AppComponent, DashboardIngresosComponent, CardSimpleComponent, CardComponent, CardNameComponent, CardDataComponent, CardEvolutionComponent, CardGraphComponent, CardIconComponent, GraphIngresos1Component],
+  declarations: [AppComponent, DashboardIngresosComponent, CardSimpleComponent, CardComponent, CardNameComponent, CardDataComponent, CardEvolutionComponent, CardGraphComponent, CardIconComponent, GraphIngresos1Component,],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, HighchartsChartModule, HttpClientModule,],
   providers: [],
   bootstrap: [AppComponent],

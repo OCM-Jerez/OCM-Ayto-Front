@@ -12,6 +12,7 @@ import { HomeComponent } from './home.component';
     HeaderComponent,
     MenuComponent,
     FooterComponent,
+
   ],
   imports: [
     CommonModule,

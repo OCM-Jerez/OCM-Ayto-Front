@@ -11,12 +11,14 @@ export const routes: Routes = [{ path: '', component: EconomicosGastosComponent 
 
 @NgModule({
   declarations: [
-    EconomicosGastosComponent
+    EconomicosGastosComponent,
+
   ],
   imports: [
     CommonModule,
+    // CommonPagesModule,
     RouterModule.forChild(routes),
-    AgGridModule.withComponents([BtnCellRenderer])
+    AgGridModule.withComponents([BtnCellRenderer]),
   ]
 })
 export class EconomicosGastosModule { }
