@@ -7,20 +7,22 @@ import { IAfterGuiAttachedParams, ICellRendererParams } from "ag-grid-community"
 @Component({
     selector: "btn-cell-renderer",
     template: `
-    <button (click)="btnClickedHandler($event)">Detalles</button>
+    <button (click)="btnClickedHandler($event)">{{ value }}</button>
   `
 })
 export class BtnCellRenderer implements ICellRendererAngularComp, OnDestroy {
+    private params: any;
+    public value: string;
     refresh(params: ICellRendererParams): boolean {
         throw new Error("Method not implemented.");
     }
     afterGuiAttached?(params?: IAfterGuiAttachedParams): void {
         throw new Error("Method not implemented.");
     }
-    private params: any;
 
     agInit(params: any): void {
         this.params = params;
+        this.value = this.params.value;
     }
 
     btnClickedHandler(e: any) {

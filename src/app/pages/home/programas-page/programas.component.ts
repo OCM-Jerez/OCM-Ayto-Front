@@ -60,11 +60,28 @@ export class ProgramasComponent implements OnInit {
       {
         width: 80,
         cellRenderer: 'btnCellRenderer',
+        cellRendererParams: {
+          value: 'Detalles',
+          clicked: function (field: any) {
+            alert(`${field} was clicked`);
+          }
+        }
       },
       {
         width: 80,
         cellRenderer: 'btnCellRenderer',
         cellRendererParams: {
+          value: 'Editar',
+          clicked: function (field: any) {
+            alert(`${field} was clicked`);
+          }
+        }
+      },
+      {
+        width: 80,
+        cellRenderer: 'btnCellRenderer',
+        cellRendererParams: {
+          value: 'Eliminar',
           clicked: function (field: any) {
             alert(`${field} was clicked`);
           }
