@@ -1,0 +1,37 @@
+@mixin backgroundButton($action) {
+    $nameIcon: "p.svg";
+
+    @if $action == "Editar" {
+        $nameIcon: "p.svg";
+    }
+
+    @if $action == "Borrar" {
+        $nameIcon: "p.svg";
+    }
+
+    background-image: url("../../../../assets/icon/" + $nameIcon);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 45px;
+    height: 45px;
+}
+
+.buttonRow {
+    cursor: pointer;
+
+    border-radius: 1rem;
+    &:hover {
+        background: #db480d;
+        transform: scale(1.4);
+    }
+
+    &--Editar {
+        @include backgroundButton("Editar");
+    }
+    &--Borrar {
+        @include backgroundButton("Borrar");
+    }
+    &--Ver {
+        @include backgroundButton("Ver");
+    }
+}

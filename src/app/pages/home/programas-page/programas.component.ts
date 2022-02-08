@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
 import { GridOptions } from 'ag-grid-community';
 import { Observable } from 'rxjs';
-import { BtnCellRenderer } from '../../../commons/ag-grid/button-cell-renderer';
+import { BtnCellRenderer } from '../../../commons/ag-grid/button-cell-renderer/button-cell-renderer';
 import localeTextESPes from '../../../commons/ag-grid/localeTextESPes.json';
 import { IPrograma } from './programas.interface';
 import { ProgramaService } from './programas.service';
@@ -61,7 +61,7 @@ export class ProgramasComponent implements OnInit {
         width: 80,
         cellRenderer: 'btnCellRenderer',
         cellRendererParams: {
-          value: 'Detalles',
+          value: 'Ver',
           clicked: function (field: any) {
             alert(`${field} was clicked`);
           }
@@ -81,7 +81,7 @@ export class ProgramasComponent implements OnInit {
         width: 80,
         cellRenderer: 'btnCellRenderer',
         cellRendererParams: {
-          value: 'Eliminar',
+          value: 'Borrar',
           clicked: function (field: any) {
             alert(`${field} was clicked`);
           }

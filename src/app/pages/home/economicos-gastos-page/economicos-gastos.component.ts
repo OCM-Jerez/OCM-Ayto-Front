@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { AgGridAngular } from 'ag-grid-angular';
 import { GridOptions } from 'ag-grid-community';
 import { Observable } from 'rxjs';
-import { BtnCellRenderer } from '../../../commons/ag-grid/button-cell-renderer';
+import { BtnCellRenderer } from '../../../commons/ag-grid/button-cell-renderer/button-cell-renderer';
 import localeTextESPes from '../../../commons/ag-grid/localeTextESPes.json';
 import { IPrograma } from '../programas-page/programas.interface';
 import { EconomicoGasto } from './economicos-gastos.interface';
