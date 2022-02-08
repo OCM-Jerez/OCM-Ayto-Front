@@ -12,7 +12,7 @@ export const routes: Routes = [{ path: '', component: ProgramasComponent }]
 @NgModule({
   declarations: [
     ProgramasComponent,
-    BtnCellRenderer
+    BtnCellRenderer,
   ],
   imports: [
     CommonModule,

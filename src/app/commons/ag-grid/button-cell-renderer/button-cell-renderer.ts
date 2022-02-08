@@ -1,6 +1,7 @@
 // https://blog.ag-grid.com/cell-renderers-in-ag-grid-every-different-flavour/#angular
 
 import { Component, OnDestroy } from "@angular/core";
+import { Router } from "@angular/router";
 import { ICellRendererAngularComp } from "ag-grid-angular/lib/interfaces";
 import { IAfterGuiAttachedParams, ICellRendererParams } from "ag-grid-community";
 
@@ -11,6 +12,8 @@ import { IAfterGuiAttachedParams, ICellRendererParams } from "ag-grid-community"
 })
 export class BtnCellRenderer implements ICellRendererAngularComp, OnDestroy {
     private params: any;
+
+    constructor(private router: Router) { }
 
     public value: 'Editar' | 'Ver' | 'Borrar'
 
@@ -28,7 +31,19 @@ export class BtnCellRenderer implements ICellRendererAngularComp, OnDestroy {
 
     btnClickedHandler(e: any) {
         // this.params.clicked(this.params.value);
-        alert("Button clicked: " + this.params.value + e);
+        switch (this.value) {
+            case 'Editar':
+                this.router.navigate(["programasEdit"]);
+                break;
+            case 'Ver':
+                this.router.navigate(["programasDetails"]);
+                break;
+            case 'Borrar':
+
+                break;
+            default:
+                break;
+        }
     }
 
     ngOnDestroy() {

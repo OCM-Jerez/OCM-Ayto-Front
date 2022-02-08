@@ -34,6 +34,7 @@ export class ProgramasComponent implements OnInit {
 
   constructor(
     private programaService: ProgramaService,
+
   ) {
     this.columnDefs = [
       {
@@ -63,7 +64,8 @@ export class ProgramasComponent implements OnInit {
         cellRendererParams: {
           value: 'Ver',
           clicked: function (field: any) {
-            alert(`${field} was clicked`);
+
+            // alert(`${field} was clicked`);
           }
         }
       },
@@ -84,6 +86,7 @@ export class ProgramasComponent implements OnInit {
           value: 'Borrar',
           clicked: function (field: any) {
             alert(`${field} was clicked`);
+
           }
         }
       },

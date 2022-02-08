@@ -18,7 +18,15 @@ export const routes: Routes = [
             },
             {
                 path: "programas",
-                loadChildren: () => import('./programas-page/programas.module').then(m => m.ProgramasModule)
+                loadChildren: () => import('./programas-page/programas.module').then(m => m.ProgramasModule),
+            },
+            {
+                path: "programasDetails",
+                loadChildren: () => import('./programas-page/programas-details-page/programas-details.module').then(m => m.ProgramasDetailsModule),
+            },
+            {
+                path: "programasEdit",
+                loadChildren: () => import('./programas-page/programas-edit-page/programas-edit.module').then(m => m.ProgramasEditModule),
             },
             {
                 path: "economicosGastos",
