@@ -4,8 +4,6 @@ import { Component, OnDestroy } from "@angular/core";
 import { ICellRendererAngularComp } from "ag-grid-angular/lib/interfaces";
 import { IAfterGuiAttachedParams, ICellRendererParams } from "ag-grid-community";
 
-
-
 @Component({
     selector: "btn-cell-renderer",
     templateUrl: './button-cell-renderer.html',
@@ -38,12 +36,12 @@ export class BtnCellRenderer implements ICellRendererAngularComp, OnDestroy {
         // https://stackoverflow.com/questions/49083993/does-angular-automatically-remove-template-event-listeners
     }
 
-    getIcon(): string {
-        switch (this.value) {
-            case 'Editar':
-                return 'p.svg'
-            default:
-                return '';
-        }
-    }
+    // getIcon(): string {
+    //     switch (this.value) {
+    //         case 'Editar':
+    //             return 'p.svg'
+    //         default:
+    //             return '';
+    //     }
+    // }
 }

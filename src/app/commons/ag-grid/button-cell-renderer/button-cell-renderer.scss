@@ -1,19 +1,21 @@
 @mixin backgroundButton($action) {
-    $nameIcon: "p.svg";
+    $nameIcon: "ver.svg";
 
     @if $action == "Editar" {
-        $nameIcon: "p.svg";
+        $nameIcon: "edit.svg";
+        background-color: #98c3eb;
     }
 
     @if $action == "Borrar" {
-        $nameIcon: "p.svg";
+        $nameIcon: "eliminar.svg";
+        background-color: #dce657;
     }
 
     background-image: url("../../../../assets/icon/" + $nameIcon);
     background-repeat: no-repeat;
     background-size: contain;
-    width: 45px;
-    height: 45px;
+    width: 25px;
+    height: 25px;
 }
 
 .buttonRow {

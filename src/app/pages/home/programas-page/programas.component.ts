@@ -58,7 +58,7 @@ export class ProgramasComponent implements OnInit {
         width: 300,
       },
       {
-        width: 80,
+        width: 40,
         cellRenderer: 'btnCellRenderer',
         cellRendererParams: {
           value: 'Ver',
@@ -68,7 +68,7 @@ export class ProgramasComponent implements OnInit {
         }
       },
       {
-        width: 80,
+        width: 40,
         cellRenderer: 'btnCellRenderer',
         cellRendererParams: {
           value: 'Editar',
@@ -78,7 +78,7 @@ export class ProgramasComponent implements OnInit {
         }
       },
       {
-        width: 80,
+        width: 40,
         cellRenderer: 'btnCellRenderer',
         cellRendererParams: {
           value: 'Borrar',

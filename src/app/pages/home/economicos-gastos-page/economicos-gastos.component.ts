@@ -62,19 +62,35 @@ export class EconomicosGastosComponent implements OnInit {
         width: 300,
       },
       {
-        width: 80,
-        cellRenderer: 'btnCellRenderer',
-      },
-      {
-        width: 80,
+        width: 40,
         cellRenderer: 'btnCellRenderer',
         cellRendererParams: {
+          value: 'Ver',
           clicked: function (field: any) {
             alert(`${field} was clicked`);
           }
         }
       },
-
+      {
+        width: 40,
+        cellRenderer: 'btnCellRenderer',
+        cellRendererParams: {
+          value: 'Editar',
+          clicked: function (field: any) {
+            alert(`${field} was clicked`);
+          }
+        }
+      },
+      {
+        width: 40,
+        cellRenderer: 'btnCellRenderer',
+        cellRendererParams: {
+          value: 'Borrar',
+          clicked: function (field: any) {
+            alert(`${field} was clicked`);
+          }
+        }
+      },
     ];
 
     this.frameworkComponents = {
