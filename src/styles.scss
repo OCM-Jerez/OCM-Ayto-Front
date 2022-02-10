@@ -12,6 +12,17 @@
 @import "ag-grid-community/dist/styles/ag-grid.css";
 @import "ag-grid-community/dist/styles/ag-theme-balham.css";
 
+// Angular Material add this lines
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+// ******************************************************************************
+
 .gridContainer {
     width: 1700px;
     color: black;
@@ -79,4 +90,13 @@
             transform: scale(1.2);
         }
     }
+}
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
