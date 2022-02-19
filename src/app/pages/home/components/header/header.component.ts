@@ -13,7 +13,7 @@ export class HeaderComponent {
 
   toggleActive() {
     this.sidebarIsOpen = !this.sidebarIsOpen
-    this.isOpen.emit(this.sidebarIsOpen);
+    this.isOpen.emit();
     // this.ck!.nativeElement.checked = !this.ck!.nativeElement.checked
   }
 }

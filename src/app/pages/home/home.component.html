@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <app-header (isOpen)="isOpen($event)"></app-header>
     <div class="container__containt">
         <app-menu *ngIf="sidebarIsOpen" [@inOutAnimation]></app-menu>
@@ -9,4 +9,27 @@
     <div>
         <app-footer> </app-footer>
     </div>
+</div> -->
+
+<div class="root">
+    <app-header (isOpen)="drawer.toggle()"></app-header>
+
+    <mat-drawer-container autosize class="container">
+
+        <mat-drawer #drawer mode="side">
+            <app-menu></app-menu>
+        </mat-drawer>
+
+
+        <mat-drawer-content class="flex-column container__content">
+
+
+            <div class="main">
+                <router-outlet></router-outlet>
+            </div>
+
+            <app-footer> </app-footer>
+        </mat-drawer-content>
+
+    </mat-drawer-container>
 </div>

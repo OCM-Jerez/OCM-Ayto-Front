@@ -1,1 +1,88 @@
-<p>programas-edit-page works!</p>
+<div>
+    <app-page-header title="Editar/crear programa" [hasButton]=true></app-page-header>
+</div>
+
+<div class="editContainer">
+    <div>
+        <form novalidate [formGroup]="formGroup" autocomplete="off">
+            <div>
+                <p>
+                    <mat-form-field class="codPro" appearance="fill">
+                        <mat-label>Código programa</mat-label>
+                        <input matInput placeholder="Introduce código programa" autofocus autocomplete="off"
+                            formControlName="codPro">
+                        <mat-icon matSuffix>account_circle</mat-icon>
+                        <!-- <mat-hint>Introduce nombre de usuario</mat-hint> -->
+                        <mat-error>{{getError('codPro')}}</mat-error>
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="descripcion" appearance="fill">
+                        <mat-label>Descripción usada por el Ayuntamiento</mat-label>
+                        <input matInput autocomplete="off" formControlName="descripcionAyto">
+                        <mat-error>{{getError('descripcionAyto')}}</mat-error>
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="descripcion" appearance="fill">
+                        <mat-label>Descripción usada por el OCM</mat-label>
+                        <input matInput autocomplete="off" formControlName="descripcionOCM">
+                        <mat-error>{{getError('descripcionOCM')}}</mat-error>
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="descripcion" appearance="fill">
+                        <mat-label>URL de WEB del OCM</mat-label>
+                        <input type="url" matInput autocomplete="off" formControlName="WebOCM">
+
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="codPro" appearance="fill">
+                        <mat-label style="font-size: 8px">Fecha creación del programa</mat-label>
+                        <input type="date" matInput autocomplete="off" formControlName="proCreatedDate">
+
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="codPro" appearance="fill">
+                        <mat-label style="font-size: 8px">Fecha en que se elimina el programa</mat-label>
+                        <input type="date" matInput autocomplete="off" formControlName="proDeletedDate">
+
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="descripcion" appearance="fill">
+                        <mat-label>Uso que se le da al programa</mat-label>
+                        <input matInput autocomplete="off" formControlName="uso">
+
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="descripcion" appearance="fill">
+                        <mat-label>Observaciones</mat-label>
+                        <input matInput autocomplete="off" formControlName="observaciones">
+
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="codPro" appearance="fill">
+                        <mat-label style="font-size: 8px">Código Organico depende el programa</mat-label>
+                        <input matInput autocomplete="off" formControlName="codOrg">
+
+                    </mat-form-field>
+                </p>
+            </div>
+
+            <!-- <button class="OCM-Button p-mt-6" type="submit" [routerLink]="['/auth/login']">Login</button>
+    <button class="OCM-Button" type="button" (click)="register()">Registrar</button> -->
+        </form>
+    </div>

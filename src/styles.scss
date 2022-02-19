@@ -23,6 +23,11 @@ body {
 }
 // ******************************************************************************
 
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 .gridContainer {
     width: 1700px;
     color: black;
@@ -90,13 +95,4 @@ body {
             transform: scale(1.2);
         }
     }
-}
-
-html,
-body {
-    height: 100%;
-}
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
